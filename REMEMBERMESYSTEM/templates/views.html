@@ -1,0 +1,141 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Studious - Education Category Responsive Website Template - Home : W3Layouts</title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="{% static 'css/style-starter.css' %}">
+</head>
+
+<body>
+    <!-- top header -->
+    <section class="w3l-top-header">
+        <div class="container-fluid">
+            <div class="top-content-w3ls d-flex align-items-center justify-content-between">
+                <div class="top-headers">
+                    <ul>
+                        <li>
+                            <a href="" class="d-sm-block d-none">Department of Computer Science</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i><a href="tel:">+918848440667</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i><a href="mailto:">xyz@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <!-- //top header -->
+
+    {% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Studious - Education Category Responsive Website Template - Home : W3Layouts</title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="{% static 'css/style-starter.css' %}">
+</head>
+
+
+    
+    <Center>
+        <form action="/views/" method="POST" ><h3>
+            {% csrf_token %}
+        
+            <div class="row">
+                <div class="col-10">
+                    <label><b><font color="#800000"> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;Choose Date </font></b></label>
+                </div>
+               
+            </div>
+            
+            <br>
+    
+           
+            </h3>
+            <input type="date" id="date" name="date">
+             <input type="submit" value="submit" >
+           
+        
+            </form>
+    
+       </Center>
+
+       <!-- <center>
+        <table>
+            {% for i in current_event %}
+         <tr>
+              <th>{{i.choose_date}}</th>
+              <th>          -         </th>
+              <th>{{i.eventsname}}</th>
+            </tr>
+            {% endfor %}
+           
+          </table>
+        </center> -->
+
+
+
+        <center>
+           
+            <table border="2" class="table">
+               
+            <tr>
+                <th>Event Date</th>
+                
+                <th></th>
+               
+                <th>Event Name</th>
+                <th></th>
+               
+                <th>Brochure</th>
+                <th></th>
+               
+                <th>Download</th>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </tr>   {% for i in ce %}
+                <tr>
+                    <td>{{i.eventsname}}</td>
+               <td></td>
+                    <td>{{i.choose_date}}</td>
+                    <td></td>
+                    <td><a>
+
+                        <img src="{{i.image.url}}" alt="" width="160" height="100">
+                        
+                    </a></td>
+                    <td></td>
+                    <td><a href={{i.image.url}} download>Download File</a></td>
+                    
+                </tr>
+              
+                {% endfor %}
+             
+              </table>
+            
+            </center>
+</body>
+</html>
+
+   
+
+</html>
